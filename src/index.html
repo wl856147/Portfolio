@@ -2,13 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Williamdevine</title>
+  <title>William Devine</title>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">-->
+  <script src="https://kit.fontawesome.com/f22792f18c.js" crossorigin="anonymous"></script>
+
 </head>
-<body>
-  <app-root></app-root>
+<body class="center">
+<app-root></app-root>
 </body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyD6iKIEqLiHcLH-F4PeOky7noTawJuhiWc",
+    authDomain: "williamdevine-4fea1.firebaseapp.com",
+    databaseURL: "https://williamdevine-4fea1.firebaseio.com",
+    projectId: "williamdevine-4fea1",
+    storageBucket: "williamdevine-4fea1.appspot.com",
+    messagingSenderId: "53267135434",
+    appId: "1:53267135434:web:356d38ccaefd68aa23ad33",
+    measurementId: "G-QNDHF3Q54W"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
 </html>
