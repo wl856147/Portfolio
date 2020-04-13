@@ -8,7 +8,6 @@ body {
     font-weight: lighter;
     background: linear-gradient(to bottom, #efedeb, #FFFFFF);
     margin: 0;
-    height: 100vh;
     color: #122C34;
 }
 
@@ -19,7 +18,11 @@ body {
     flex-direction: column;
 }
 
-h1 {
+.title {
+    height: 100vh;
+}
+
+.title h1 {
     /*margin-top: 2em;*/
     /*font-size: 4em;*/
     text-align: center;
@@ -39,7 +42,7 @@ h1 {
 }
 
 .aboutMe {
-    border: solid 1px blue;
+    /*border: solid 1px blue;*/
     margin: 10%;
     display: flex;
     flex-direction: row;
@@ -48,18 +51,18 @@ h1 {
 }
 
 .aboutMe .img {
-    border: solid 1px green;
-    width: 50%;
+    width: 45%;
 }
 
 .aboutMe .img img {
     border-radius: 50%;
-    width: 285px;
+    width: 250px;
 }
 
 .aboutMe .bio {
-    border: solid 1px red;
-    width: 50%;
+    /*border: solid 1px red;*/
+    margin-left: 1rem;
+    width: 55%;
 }
 
 .aboutMe .bio h3 {
@@ -69,13 +72,17 @@ h1 {
     font-size: 2.25em;
     font-weight: 600;
     line-height: 1;
+    margin: 0;
 }
 
-.aboutMe .bio p {
-    color: inherit;
+.aboutMe .bio span {
     text-align: center;
-    line-height: 1;
-    margin: 0 1rem;
+    font-family: 'Muli', sans-serif;
+    font-weight: 200;
+    display: block;
+    padding: 1em 0 1.5em;
+    color: #333333;
+    line-height: 1.4;
 }
 
 .aboutMe .bio .socialMediaLinks {
@@ -83,8 +90,11 @@ h1 {
     justify-content: center;
 }
 
+.aboutMe .bio .socialMediaLinks div {
+    margin: 0 0.5rem;
+}
+
 .aboutMe .bio .socialMediaLinks div a i {
-    margin: 1rem;
     color: black;
     border: solid 2px transparent;
     padding: 0.5rem 1rem;
