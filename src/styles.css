@@ -6,7 +6,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     /*font-family: 'Primary', Moderne Sans, sans-serif;*/
     font-weight: lighter;
-    background: linear-gradient(to bottom, #efedeb, #FFFFFF);
+    /*background: linear-gradient(to bottom, #efedeb, #FFFFFF);*/
     margin: 0;
     color: #122C34;
 }
@@ -20,6 +20,7 @@ body {
 
 .title {
     height: 100vh;
+    background: linear-gradient(to bottom, #efedeb, #FFFFFF);
 }
 
 .title h1 {
@@ -41,28 +42,38 @@ body {
     padding: 0 0 10px 10px;
 }
 
+.about {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+}
+
 .aboutMe {
-    /*border: solid 1px blue;*/
-    margin: 10%;
+    /*border: solid 1px blue; !* For Development *!*/
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-content: center;
+    align-items: center;
+    width: 65rem;
+    margin-bottom: 10rem;
 }
 
 .aboutMe .img {
+    /*border: solid 1px orange; !* For Development *!*/
     width: 45%;
 }
 
 .aboutMe .img img {
     border-radius: 50%;
-    width: 250px;
+    width: 300px;
 }
 
 .aboutMe .bio {
-    /*border: solid 1px red;*/
+    /*border: solid 1px red; !* For Development *!*/
     margin-left: 1rem;
-    width: 55%;
+    width: 55rem;
 }
 
 .aboutMe .bio h3 {
@@ -79,6 +90,7 @@ body {
     text-align: center;
     font-family: 'Muli', sans-serif;
     font-weight: 200;
+    font-size: 1.25em;
     display: block;
     padding: 1em 0 1.5em;
     color: #333333;
@@ -116,8 +128,43 @@ body {
     color: #C13584;
 }
 
+@media only screen and (max-width: 1075px) {
+    .aboutMe .img img {
+        width: 250px;
+        margin-left: 3rem;
+    }
 
+    .aboutMe {
+        width: 55rem;
+    }
 
+    .aboutMe .bio {
+        width: 28rem;
+    }
+}
+
+@media only screen and (max-width: 895px) {
+    .aboutMe {
+        flex-direction: column;
+    }
+
+    .aboutMe .img {
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        margin-bottom: 2rem;
+    }
+
+    .aboutMe .img img {
+        width: 300px;
+        margin-left: 0;
+    }
+
+    .aboutMe .bio {
+        width: 90%;
+        margin: 1rem;
+    }
+}
 
 
 
