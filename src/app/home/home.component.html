@@ -36,17 +36,16 @@
 
 
 	<article id="workExperience" class="workExpirience">
-		<div style="border: solid 1px red; display: flex;flex-direction: column; justify-content: center;align-content: center;align-items: center;width: 65rem;">
+
+		<div>
 			<h3>Work Experience</h3>
-			<div style="display: flex;flex-direction: row;justify-content: center;align-content: center;align-items: center;">
+		</div>
+		<owl-carousel-o [options]="customOptions">
+			<ng-template carouselSlide>
+				<div id="slide1">
 
-				<div style="margin-right: 2rem;border: solid 1px black; border-radius: 50%; width: 25px; height: 25px;display: flex;flex-direction: column; justify-content: center;align-content: center;align-items: center;">
-					<
-				</div>
-
-				<div style="margin-top: 3rem; display: flex;flex-direction: column; justify-content: center;align-content: center;align-items: center; width: 65%; text-align: center;">
 					<img src="../../assets/images/williamdevine.png" alt="Image of William Devine"
-					     style="width: 100px; height:100px; border-radius: 50%;">
+					     style="width: 100px; height:100px; border-radius: 50%; margin-bottom: 1rem;">
 					<h4>JASCO Applied Science</h4>
 					<h5>Software Engineer</h5>
 					<h6>May 2018 - Aug 2018</h6>
@@ -56,14 +55,45 @@
 						dignissim odio. Quisque nec rutrum elit. Sed eget felis erat. Nullam in accumsan eros, eu
 						egestas sapien.
 					</span>
-				</div>
 
-				<div style="margin-left: 2rem;border: solid 1px black; border-radius: 50%; width: 25px; height: 25px;display: flex;flex-direction: column; justify-content: center;align-content: center;align-items: center;">
-					>
 				</div>
+			</ng-template>
+			<ng-template carouselSlide>
+				<div id="slide2">
 
-			</div>
-		</div>
+					<img src="../../assets/images/williamdevine.png" alt="Image of William Devine"
+					     style="width: 100px; height:100px; border-radius: 50%; margin-bottom: 1rem;">
+					<h4>JASCO Applied Science</h4>
+					<h5>Software Engineer</h5>
+					<h6>May 2018 - Aug 2018</h6>
+					<span>
+						Proin at aliquet odio. Vivamus tristique tempus feugiat. Nulla bibendum, augue et cursus
+						vulputate, orci metus porttitor metus, sit amet sodales nunc felis eget lorem. Phasellus et
+						dignissim odio. Quisque nec rutrum elit. Sed eget felis erat. Nullam in accumsan eros, eu
+						egestas sapien.
+					</span>
+
+				</div>
+			</ng-template>
+			<ng-template  carouselSlide style="display:flex; justify-content: center; align-items: center;">
+				<div id="slide3">
+
+					<img src="../../assets/images/williamdevine.png" alt="Image of William Devine"
+					     style="width: 100px; height:100px; border-radius: 50%; margin-bottom: 1rem;">
+					<h4>JASCO Applied Science</h4>
+					<h5>Software Engineer</h5>
+					<h6>May 2018 - Aug 2018</h6>
+					<span>
+						Proin at aliquet odio. Vivamus tristique tempus feugiat. Nulla bibendum, augue et cursus
+						vulputate, orci metus porttitor metus, sit amet sodales nunc felis eget lorem. Phasellus et
+						dignissim odio. Quisque nec rutrum elit. Sed eget felis erat. Nullam in accumsan eros, eu
+						egestas sapien.
+					</span>
+
+				</div>
+			</ng-template>
+		</owl-carousel-o>
+
 	</article>
 
 

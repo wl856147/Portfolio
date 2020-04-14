@@ -2,6 +2,8 @@ import {Component, OnInit, HostListener, Inject, ViewChild} from '@angular/core'
 import {trigger, state, transition, style, animate} from '@angular/animations';
 import {DOCUMENT} from '@angular/common';
 
+import {OwlOptions} from 'ngx-owl-carousel-o';
+
 import * as $ from 'jquery';
 
 @Component({
@@ -19,6 +21,25 @@ import * as $ from 'jquery';
     //     )]
 })
 export class HomeComponent implements OnInit {
+
+    customOptions: OwlOptions = {
+        loop: false,
+        mouseDrag: true,
+        touchDrag: true,
+        pullDrag: true,
+        dots: false,
+        navSpeed: 400,
+        navText: ['Prev', 'Next'],
+        items: 3,
+        center: true,
+        startPosition: 2,
+        responsive: {
+            0: {
+                items: 1
+            }
+        },
+        nav: true
+    };
 
     constructor() {
     }

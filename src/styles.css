@@ -43,12 +43,23 @@ body {
     padding: 0 0 10px 10px;
 }
 
-article {
+article h3 {
+    color: inherit;
+    font-family: 'Primary', Moderne Sans, sans-serif;
+    text-align: center;
+    font-size: 2.25em;
+    font-weight: 600;
+    line-height: 1;
+    margin: 0;
+}
+
+/***** About *****/
+#about {
     display: flex;
     justify-content: center;
     align-content: center;
     flex-direction: row;
-    margin: 25% 0;
+    padding: 15rem 0;
 }
 
 .aboutMe {
@@ -59,7 +70,6 @@ article {
     align-content: center;
     align-items: center;
     width: 65rem;
-    /*margin-bottom: 25rem;*/
 }
 
 .aboutMe .img {
@@ -79,17 +89,7 @@ article {
     width: 55rem;
 }
 
-article h3 {
-    color: inherit;
-    font-family: 'Primary', Moderne Sans, sans-serif;
-    text-align: center;
-    font-size: 2.25em;
-    font-weight: 600;
-    line-height: 1;
-    margin: 0;
-}
-
-.aboutMe .bio span {
+span {
     text-align: center;
     font-family: 'Muli', sans-serif;
     font-weight: 200;
@@ -131,6 +131,35 @@ article h3 {
     color: #C13584;
 }
 
+
+/***** Work Experience *****/
+#workExperience {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#workExperience owl-carousel-o {
+    width: 40rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /*border: solid 2px firebrick;*/
+}
+
+#workExperience #slide1, #workExperience #slide2, #workExperience #slide3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 3rem;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+}
+
 @media only screen and (max-width: 1075px) {
     .aboutMe .img img {
         width: 250px;
@@ -168,6 +197,10 @@ article h3 {
     .aboutMe .bio {
         width: 90%;
         margin: 1rem;
+    }
+
+    #workExperience owl-carousel-o {
+        width: 25rem;
     }
 }
 
