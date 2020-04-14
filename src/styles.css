@@ -1,12 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 /*@import url('https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap');*/
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     /*font-family: 'Nunito', 'sans-serif';*/
-    font-family: 'Open Sans', sans-serif;
     /*font-family: 'Primary', Moderne Sans, sans-serif;*/
+    font-family: 'Open Sans', sans-serif;
     font-weight: lighter;
-    /*background: linear-gradient(to bottom, #efedeb, #FFFFFF);*/
     margin: 0;
     color: #122C34;
 }
@@ -24,8 +27,6 @@ body {
 }
 
 .title h1 {
-    /*margin-top: 2em;*/
-    /*font-size: 4em;*/
     text-align: center;
     font-family: 'Primary', Moderne Sans, sans-serif;
     text-transform: uppercase;
@@ -42,11 +43,12 @@ body {
     padding: 0 0 10px 10px;
 }
 
-.about {
+article {
     display: flex;
     justify-content: center;
     align-content: center;
     flex-direction: row;
+    margin: 25% 0;
 }
 
 .aboutMe {
@@ -57,7 +59,7 @@ body {
     align-content: center;
     align-items: center;
     width: 65rem;
-    margin-bottom: 10rem;
+    /*margin-bottom: 25rem;*/
 }
 
 .aboutMe .img {
@@ -77,7 +79,7 @@ body {
     width: 55rem;
 }
 
-.aboutMe .bio h3 {
+article h3 {
     color: inherit;
     font-family: 'Primary', Moderne Sans, sans-serif;
     text-align: center;

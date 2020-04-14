@@ -1,0 +1,42 @@
+#navbar {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sticky {
+    display: flex!important;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    height: 80px;
+    width: 100%;
+}
+
+h2 {
+    font-family: 'Primary', Moderne Sans, sans-serif;
+    text-transform: uppercase;
+    color: #031926;
+    /*font-size: 3em;*/
+    margin: 15px 0 15px 0;
+}
+
+.name {
+    margin-left: 2rem;
+}
+
+.links {
+    width: 20rem;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 2rem;
+}
+
+.links a {
+    color: black;
+    text-decoration: none;
+}
+
+.links a:hover {
+    color: #53d19f;
+}
