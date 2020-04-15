@@ -1,4 +1,4 @@
-<section class="web_homePage" (scroll)="onWindowScroll($event);">
+<section style="margin-bottom: 10rem;" class="web_homePage" (scroll)="onWindowScroll($event);">
 
 	<div class="title center">
 		<h1>William Devine</h1>
@@ -40,15 +40,14 @@
 		<div>
 			<h3>Work Experience</h3>
 		</div>
-		<owl-carousel-o [options]="customOptions">
+		<owl-carousel-o [options]="customOptions" >
 			<ng-template carouselSlide>
-				<div id="slide1">
+				<div id="slide1" class="slide">
 
-					<img src="../../assets/images/jascoLogo3.png" alt="JASCO Applied Science"
-					     style="height: 110px; width: auto; margin-bottom: 1rem;">
+					<img src="../../assets/images/jascoLogo3.png" alt="JASCO Applied Science">
 					<h4>JASCO Applied Science</h4>
 					<h5>Software Engineer</h5>
-					<h6>May 2018 - August 2018</h6>
+					<em>May 2018 - August 2018</em>
 					<span>
 						Proin at aliquet odio. Vivamus tristique tempus feugiat. Nulla bibendum, augue et cursus
 						vulputate, orci metus porttitor metus, sit amet sodales nunc felis eget lorem. Phasellus et
@@ -59,13 +58,12 @@
 				</div>
 			</ng-template>
 			<ng-template carouselSlide>
-				<div id="slide2">
+				<div id="slide2" class="slide">
 
-					<img src="../../assets/images/dalLogo.png" alt="Image of William Devine"
-					     style="height: 110px; width:auto; margin-bottom: 1rem;">
+					<img src="../../assets/images/dalLogo.png" alt="Image of William Devine">
 					<h4>Dalhousie University</h4>
 					<h5>Head Teaching Assistant</h5>
-					<h6>September 2018 - December 2018</h6>
+					<em>September 2018 - December 2018</em>
 					<span>
 						Proin at aliquet odio. Vivamus tristique tempus feugiat. Nulla bibendum, augue et cursus
 						vulputate, orci metus porttitor metus, sit amet sodales nunc felis eget lorem. Phasellus et
@@ -76,13 +74,12 @@
 				</div>
 			</ng-template>
 			<ng-template carouselSlide>
-				<div id="slide3">
+				<div id="slide3" class="slide">
 
-					<img src="../../assets/images/pwLogo.png" alt="Image of William Devine"
-					     style="height: 110px; width: auto; margin-bottom: 1rem;">
+					<img src="../../assets/images/pwLogo.png" alt="Image of William Devine">
 					<h4>Pratt & Whitney Canada</h4>
 					<h5>Full Stack Web Developer</h5>
-					<h6>January 2019 - April 2020</h6>
+					<em>January 2019 - April 2020</em>
 					<span>
 						Proin at aliquet odio. Vivamus tristique tempus feugiat. Nulla bibendum, augue et cursus
 						vulputate, orci metus porttitor metus, sit amet sodales nunc felis eget lorem. Phasellus et

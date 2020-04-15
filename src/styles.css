@@ -153,12 +153,38 @@ span {
     display: flex;
     align-items: center;
     justify-content: center;
-
-    margin: 3rem;
+    margin: 3rem 3rem 0 3rem;
     flex-direction: column;
     align-content: center;
     text-align: center;
     flex-wrap: wrap;
+}
+
+#workExperience .slide img {
+    height: 110px;
+    width: auto;
+    margin-bottom: 1rem;
+}
+
+#workExperience .slide h4 {
+    color: #777777;
+    font-size: 2em;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+#workExperience .slide h5 {
+    color: #959595;
+    font-size: 1.25em;
+    font-family: inherit;
+    font-weight: 400;
+    line-height: 1;
+}
+
+#workExperience .slide em {
+    line-height: 1.6;
+    font-style: italic;
 }
 
 @media only screen and (max-width: 1150px) {
