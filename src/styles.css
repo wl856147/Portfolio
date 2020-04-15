@@ -149,7 +149,7 @@ span {
     /*border: solid 2px firebrick;*/
 }
 
-#workExperience #slide1, #workExperience #slide2, #workExperience #slide3 {
+#workExperience .slide {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -164,6 +164,10 @@ span {
     height: 110px;
     width: auto;
     margin-bottom: 1rem;
+}
+
+#workExperience #slide4 img {
+    border-radius: 50%;
 }
 
 #workExperience .slide h4 {
