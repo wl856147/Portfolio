@@ -28,17 +28,18 @@ export class HomeComponent implements OnInit {
         touchDrag: true,
         pullDrag: true,
         dots: false,
-        navSpeed: 400,
-        navText: ['Prev', 'Next'],
+        navSpeed: 500,
+        navText: ['<', '>'],
         items: 3,
         center: true,
         startPosition: 2,
+        margin: 1000,
         responsive: {
             0: {
                 items: 1
             }
         },
-        nav: true
+        nav: false
     };
 
     constructor() {

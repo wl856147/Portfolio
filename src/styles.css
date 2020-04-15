@@ -131,7 +131,6 @@ span {
     color: #C13584;
 }
 
-
 /***** Work Experience *****/
 #workExperience {
     display: flex;
@@ -141,11 +140,12 @@ span {
 }
 
 #workExperience owl-carousel-o {
-    width: 40rem;
+    width: 75rem;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    font-size: 0.9em;
     /*border: solid 2px firebrick;*/
 }
 
@@ -154,13 +154,15 @@ span {
     align-items: center;
     justify-content: center;
 
-    margin-top: 3rem;
+    margin: 3rem;
     flex-direction: column;
     align-content: center;
     text-align: center;
+    flex-wrap: wrap;
 }
 
-@media only screen and (max-width: 1075px) {
+@media only screen and (max-width: 1150px) {
+
     .aboutMe .img img {
         width: 250px;
         height: 250px;
@@ -174,9 +176,14 @@ span {
     .aboutMe .bio {
         width: 28rem;
     }
+
+    #workExperience owl-carousel-o {
+        width: 100vw;
+    }
 }
 
 @media only screen and (max-width: 895px) {
+
     .aboutMe {
         flex-direction: column;
     }
@@ -199,9 +206,14 @@ span {
         margin: 1rem;
     }
 
+}
+
+@media only screen and (max-width: 750px) {
+
     #workExperience owl-carousel-o {
-        width: 25rem;
+        font-size: 0.8em;
     }
+
 }
 
 
