@@ -317,18 +317,14 @@ span {
 
 @media only screen and (max-width: 750px) {
 
-    #about {
-        padding-top: 10rem;
+    #about, #workExperience, #portfolio {
+        padding-top: 3rem;
     }
 
     .aboutMe .img img {
         width: 225px;
         height: 225px;
         margin-left: 0;
-    }
-
-    #workExperience {
-        padding-top: 10rem;
     }
 
     #workExperience owl-carousel-o {
@@ -342,13 +338,10 @@ span {
         margin-right: 0;
     }
 
-    #portfolio {
-        padding-top: 10rem;
-    }
-
     #portfolio div {
         font-size: 90%;
     }
+
     #portfolio div .portfolioLinks {
         width: 100vw;
     }

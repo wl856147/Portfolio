@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "williamdevine-4fea1"
+  },
+  "targets": {
+    "williamdevine-4fea1": {
+      "hosting": {
+        "williamdevine": [
+          "williamdevine-4fea1"
+        ]
+      }
+    }
   }
 }

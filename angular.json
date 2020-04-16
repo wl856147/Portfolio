@@ -88,7 +88,9 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": ["../node_modules/jquery/dist/jquery.min.js"]
+            "scripts": [
+              "../node_modules/jquery/dist/jquery.min.js"
+            ]
           }
         },
         "lint": {
@@ -115,8 +117,13 @@
               "devServerTarget": "williamdevine:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "williamdevine"
 }

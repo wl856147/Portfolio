@@ -154,37 +154,28 @@
 
 	<article id="contact" class="contact">
 
-		<div>
-			<h3>Contact</h3>
-			<div class="contactForm">
-				<span>
-					Programmer, photographer, designer, and creator. I take complex problems and produce simple and
-					elegant results. Continuously working to improve my skills so that I can be the best version of myself.
-				</span>
-				<span>
-					Programmer, photographer, designer, and creator. I take complex problems and produce simple and
-					elegant results. Continuously working to improve my skills so that I can be the best version of myself.
-				</span>
-				<span>
-					Programmer, photographer, designer, and creator. I take complex problems and produce simple and
-					elegant results. Continuously working to improve my skills so that I can be the best version of myself.
-				</span>
+		<form [formGroup]="messageMe">
+			<h2>Please provide your email address</h2>
+
+			<div class="form-group">
+				<label>Name:</label>
+				<input [class.is-invalid]="messageMe.get('name').invalid && messageMe.get('name').touched" type="email" class="form-control" formControlName="email"type="text" class="form-control" formControlName="name"/>
 			</div>
-			<div class="portfolioLinks">
 
-				<div class="portfolioLink">
-					<a href="https://gitlab.com/william84" target="_blank">
-						<i class="fas fa-th-list"></i> PORTFOLIO
-					</a>
-				</div>
-
-				<div class="resumeLink">
-					<a href="https://www.linkedin.com/in/william-devine/" target="_blank">
-						<i class="fas fa-id-card"></i> DOWNLOAD RESUME
-					</a>
-				</div>
-
+			<div class="form-group">
+				<label>Email:</label>
+				<input [class.is-invalid]="messageMe.get('email').invalid && messageMe.get('email').touched" type="email" class="form-control" formControlName="email"/>
 			</div>
-		</div>
+
+			<div class="form-group">
+				<label>Message:</label>
+				<textarea [class.is-invalid]="messageMe.get('message').invalid && messageMe.get('message').touched" type="text" class="form-control" formControlName="message"></textarea>
+			</div>
+
+			<div class="form-group">
+				<button (click)="sendEmail()">Send</button>
+			</div>
+		</form>
+
 	</article>
 </section>

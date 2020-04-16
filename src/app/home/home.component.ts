@@ -6,22 +6,34 @@ import {OwlOptions} from 'ngx-owl-carousel-o';
 
 import * as $ from 'jquery';
 
+import {FormGroup, FormControl, Validators} from '@angular/forms';
+import {AngularFireFunctions} from '@angular/fire/functions';
+import {AngularFireAuth} from '@angular/fire/auth';
+import * as firebase from 'firebase/app';
+
 @Component({
     selector: 'app-home',
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.css']
-    // ,
-    // animations: [
-    //     trigger('fade',
-    //         [
-    //             state('void', style({opacity: 0})),
-    //             transition(':enter', [animate(200)]),
-    //             transition(':leave', [animate(200)]),
-    //         ]
-    //     )]
 })
 export class HomeComponent implements OnInit {
 
+    messageMe = new FormGroup({
+        name: new FormControl('', [
+            Validators.required,
+            Validators.pattern('^^(?!\\s*$).+')
+        ]),
+        email: new FormControl('', [
+            Validators.required,
+            Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$')
+        ]),
+        message: new FormControl('', [
+            Validators.required,
+            Validators.pattern('^(?!\\s*$).+')
+        ])
+    });
+
+    // Work experience slide options
     customOptions: OwlOptions = {
         loop: false,
         mouseDrag: true,
@@ -42,13 +54,25 @@ export class HomeComponent implements OnInit {
         nav: true
     };
 
-    constructor() {
+    constructor(public afAuth: AngularFireAuth, private fun: AngularFireFunctions) {
     }
 
     ngOnInit() {
 
     }
 
+    sendEmail() {
+        const callable = this.fun.httpsCallable('sendEmail');
+
+        callable({
+            name: 'Bobby Bugger',
+            email: 'bob@email.ca',
+            message: 'Test Message!'
+        })
+            .subscribe();
+    }
+
+    // Sticky header
     @HostListener('window:scroll', ['$event'])
     onWindowScroll(e) {
         if (window.pageYOffset > 550) {
