@@ -2,6 +2,7 @@
     display: none;
     justify-content: space-between;
     align-items: center;
+    z-index: 1;
 }
 
 .sticky {
@@ -26,7 +27,7 @@ h2 {
 }
 
 .links {
-    width: 20rem;
+    width: 25rem;
     display: flex;
     justify-content: space-between;
     margin-right: 2rem;

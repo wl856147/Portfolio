@@ -24,6 +24,7 @@ body {
 .title {
     height: 100vh;
     background: linear-gradient(to bottom, #efedeb, #FFFFFF);
+    /*background: linear-gradient(to bottom, rgba(83, 209, 159, 0.2), rgba(83, 209, 159, 0.01));*/
 }
 
 .title h1 {
@@ -53,7 +54,20 @@ article h3 {
     margin: 0;
 }
 
-/***** About *****/
+span {
+    text-align: center;
+    font-family: 'Muli', sans-serif;
+    font-weight: 200;
+    font-size: 1.25em;
+    display: block;
+    padding: 1em 0 1.5em;
+    color: #333333;
+    line-height: 1.4;
+}
+
+/*************************************/
+/*************** About ***************/
+/*************************************/
 #about {
     display: flex;
     justify-content: center;
@@ -89,17 +103,6 @@ article h3 {
     width: 55rem;
 }
 
-span {
-    text-align: center;
-    font-family: 'Muli', sans-serif;
-    font-weight: 200;
-    font-size: 1.25em;
-    display: block;
-    padding: 1em 0 1.5em;
-    color: #333333;
-    line-height: 1.4;
-}
-
 .aboutMe .bio .socialMediaLinks {
     display: flex;
     justify-content: center;
@@ -131,12 +134,15 @@ span {
     color: #C13584;
 }
 
-/***** Work Experience *****/
+/*************************************/
+/********** Work Experience **********/
+/*************************************/
 #workExperience {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 15rem;
 }
 
 #workExperience owl-carousel-o {
@@ -146,7 +152,8 @@ span {
     align-items: center;
     flex-direction: column;
     font-size: 0.9em;
-    /*border: solid 2px firebrick;*/
+    padding: 0 5rem 15rem 5rem;
+    z-index: 0;
 }
 
 #workExperience .slide {
@@ -191,6 +198,64 @@ span {
     font-style: italic;
 }
 
+/*************************************/
+/************* Portfolio *************/
+/*************************************/
+#portfolio {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    padding: 15rem 5rem;
+}
+
+#portfolio div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    width: 65rem;
+}
+
+#portfolio div .portfolioInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem 3rem 0 3rem;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+#portfolio div .portfolioLinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 50%;
+}
+
+.portfolioLinks div a {
+    color: black;
+    border: solid 2px transparent;
+    padding: 0.5rem 1rem;
+    transition: 0.2s;
+}
+
+.portfolioLinks div :hover {
+    border: solid 2px #53d19f;
+    color: #53d19f;
+    text-decoration: none;
+}
+
+/*************************************/
+/************** Contact **************/
+/*************************************/
+
+/*************************************/
+/********** Responsiveness ***********/
+/*************************************/
 @media only screen and (max-width: 1150px) {
 
     .aboutMe .img img {
@@ -209,6 +274,14 @@ span {
 
     #workExperience owl-carousel-o {
         width: 100vw;
+    }
+
+    #portfolio div {
+        width: 85vw;
+    }
+
+    #portfolio div .portfolioLinks {
+        width: 60vw;
     }
 }
 
@@ -236,14 +309,49 @@ span {
         margin: 1rem;
     }
 
+    #portfolio div .portfolioLinks {
+        width: 80vw;
+    }
+
 }
 
 @media only screen and (max-width: 750px) {
 
+    #about {
+        padding-top: 10rem;
+    }
+
+    .aboutMe .img img {
+        width: 225px;
+        height: 225px;
+        margin-left: 0;
+    }
+
+    #workExperience {
+        padding-top: 10rem;
+    }
+
     #workExperience owl-carousel-o {
+        padding-left: 1rem;
+        padding-right: 1rem;
         font-size: 0.8em;
     }
 
+    #workExperience .slide {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #portfolio {
+        padding-top: 10rem;
+    }
+
+    #portfolio div {
+        font-size: 90%;
+    }
+    #portfolio div .portfolioLinks {
+        width: 100vw;
+    }
 }
 
 
