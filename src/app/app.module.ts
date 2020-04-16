@@ -13,11 +13,9 @@ import {HttpClientModule} from '@angular/common/http';
 import {CarouselModule} from 'ngx-owl-carousel-o';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
-import {AngularFireModule} from '@angular/fire';
-import {AngularFirestoreModule} from '@angular/fire/firestore';
-import {AngularFireStorageModule} from '@angular/fire/storage';
-import {AngularFireAuthModule} from '@angular/fire/auth';
-import {AngularFireFunctionsModule} from '@angular/fire/functions';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireFunctionsModule } from '@angular/fire/functions';
 
 
 const firebaseConfig = {
@@ -49,8 +47,6 @@ const firebaseConfig = {
         ReactiveFormsModule,
 
         AngularFireModule.initializeApp(firebaseConfig),
-        AngularFirestoreModule,
-        AngularFireStorageModule,
         AngularFireAuthModule,
         AngularFireFunctionsModule
     ],

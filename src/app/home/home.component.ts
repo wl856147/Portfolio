@@ -11,6 +11,8 @@ import {AngularFireFunctions} from '@angular/fire/functions';
 import {AngularFireAuth} from '@angular/fire/auth';
 import * as firebase from 'firebase/app';
 
+import {HttpRequest, HttpHandler, HttpEvent, HttpInterceptor, HttpClientModule} from '@angular/common/http';
+
 @Component({
     selector: 'app-home',
     templateUrl: './home.component.html',
@@ -61,15 +63,9 @@ export class HomeComponent implements OnInit {
 
     }
 
-    sendEmail() {
-        const callable = this.fun.httpsCallable('sendEmail');
-
-        callable({
-            name: 'Bobby Bugger',
-            email: 'bob@email.ca',
-            message: 'Test Message!'
-        })
-            .subscribe();
+    sendMail() {
+        const callable = this.fun.httpsCallable('genericEmail');
+        callable({ text: 'Sending email with Angular and SendGrid is fun!', subject: 'Email from Angular'}).subscribe();
     }
 
     // Sticky header
