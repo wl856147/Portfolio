@@ -1,19 +1,9 @@
-import {Component, OnInit, HostListener, Inject, ViewChild} from '@angular/core';
-// import {trigger, state, transition, style, animate} from '@angular/animations';
-// import {DOCUMENT} from '@angular/common';
-
+import {Component, OnInit, HostListener} from '@angular/core';
 import {OwlOptions} from 'ngx-owl-carousel-o';
-
-import * as $ from 'jquery';
-
 import {FormGroup, FormControl, Validators} from '@angular/forms';
 import {AngularFireFunctions} from '@angular/fire/functions';
-// import {AngularFireAuth} from '@angular/fire/auth';
-// import * as firebase from 'firebase/app';
+import * as $ from 'jquery';
 
-// import {HttpRequest, HttpHandler, HttpEvent, HttpInterceptor, HttpClientModule} from '@angular/common/http';
-
-// import {ContactFormService} from '../models/contact-form.service';
 
 @Component({
     selector: 'app-home',
@@ -21,22 +11,6 @@ import {AngularFireFunctions} from '@angular/fire/functions';
     styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-    // Contact Form input field criteria
-    messageMe = new FormGroup({
-        name: new FormControl('', [
-            Validators.required,
-            Validators.pattern('^^(?!\\s*$).+')
-        ]),
-        email: new FormControl('', [
-            Validators.required,
-            Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$')
-        ]),
-        message: new FormControl('', [
-            Validators.required,
-            Validators.pattern('^(?!\\s*$).+')
-        ])
-    });
 
     // Work experience slide options
     customOptions: OwlOptions = {
@@ -59,13 +33,23 @@ export class HomeComponent implements OnInit {
         nav: false
     };
 
-    // model = new ContactFormService('', '', '');
-
-    submitted = false;
+    // Contact Form input field criteria
+    messageMe = new FormGroup({
+        name: new FormControl('', [
+            Validators.required,
+            Validators.pattern('^^(?!\\s*$).+')
+        ]),
+        email: new FormControl('', [
+            Validators.required,
+            Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$')
+        ]),
+        message: new FormControl('', [
+            Validators.required,
+            Validators.pattern('^(?!\\s*$).+')
+        ])
+    });
 
     submitMessage() {
-        this.submitted = true;
-
         if (this.messageMe.valid) {
             const callable = this.fun.httpsCallable('genericEmail');
             callable({
@@ -84,26 +68,21 @@ export class HomeComponent implements OnInit {
 
             console.log('Valid Form.');
         } else {
+            $('#emailError').css({opacity: 0.0, visibility: 'visible'}).animate({opacity: 1.0}, 500);
+
+            setTimeout(() => {
+                $('#emailError').css({opacity: 1.0}).animate({opacity: 0.0}, 500);
+            }, 2000);
+
             console.log('Invalid Form.');
         }
-        // this.submitted = false;
     }
 
     constructor(private fun: AngularFireFunctions) {
     }
 
     ngOnInit() {
-        // this.model = new ContactFormService('', '', '');
     }
-
-    // sendMail() {
-    //     const callable = this.fun.httpsCallable('genericEmail');
-    //     callable({
-    //         name: 'name',
-    //         email: 'test@test.ca',
-    //         message: 'Email from Angular'
-    //     }).subscribe();
-    // }
 
     // Sticky header
     @HostListener('window:scroll', ['$event'])

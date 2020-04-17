@@ -160,8 +160,12 @@
 
 			<form [formGroup]="messageMe" (ngSubmit)="submitMessage()">
 
+				<div id="emailError">
+					<span>Error Submitting Email.</span>
+				</div>
+
 				<div id="emailConfirm">
-					<span style="color: #53d19f; ">Email Submitted!</span>
+					<span>Email Submitted!</span>
 				</div>
 
 				<label for="nameInput" class="inp">

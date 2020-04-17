@@ -270,7 +270,7 @@ article h3 {
 
 #contact .contactMe form {
     width: 100%;
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 #contact .contactMe form .inp {
@@ -390,6 +390,13 @@ article h3 {
     width: 100%;
     text-align: center;
     visibility: hidden;
+    color: #53d19f;
+}
+#emailError {
+    width: 100%;
+    text-align: center;
+    visibility: hidden;
+    color: red;
 }
 
 /*************************************/
