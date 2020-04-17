@@ -14,13 +14,13 @@ sgMail.setApiKey(API_KEY);
 export const genericEmail = functions.https.onCall(async (data, context) => {
 
     const msg = {
-        to: 'will.devine777@gmail.com',
+        to: 'william@williamdevine.ca',
         from: 'william@williamdevine.ca',
         templateId: TEMPLATE_ID,
         dynamic_template_data: {
-            name: 'test1Name',
-            email: 'test1email',
-            message: 'test1mes'
+            name: data.name,
+            email: data.email,
+            message: data.message
         },
     };
 

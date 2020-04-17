@@ -12,7 +12,7 @@
 			</div>
 			<div class="bio">
 				<h3>About Me</h3>
-				<span>
+				<span class="span">
 					Programmer, photographer, designer, and creator. I take complex problems and produce simple and
 					elegant results. Continuously working to improve my skills so that I can be the best version of myself.
 				</span>
@@ -49,7 +49,7 @@
 					<h4>JASCO Applied Science</h4>
 					<h5>Software Engineer</h5>
 					<em>May 2018 - August 2018</em>
-					<span>
+					<span class="span">
 						Proin at aliquet odio. Vivamus tristique tempus feugiat. Nulla bibendum, augue et cursus
 						vulputate, orci metus porttitor metus, sit amet sodales nunc felis eget lorem. Phasellus et
 						dignissim odio. Quisque nec rutrum elit. Sed eget felis erat. Nullam in accumsan eros, eu
@@ -66,7 +66,7 @@
 					<h4>Dalhousie University</h4>
 					<h5>Head Teaching Assistant</h5>
 					<em>September 2018 - December 2018</em>
-					<span>
+					<span class="span">
 						Proin at aliquet odio. Vivamus tristique tempus feugiat. Nulla bibendum, augue et cursus
 						vulputate, orci metus porttitor metus, sit amet sodales nunc felis eget lorem. Phasellus et
 						dignissim odio. Quisque nec rutrum elit. Sed eget felis erat. Nullam in accumsan eros, eu
@@ -83,7 +83,7 @@
 					<h4>Pratt & Whitney Canada</h4>
 					<h5>Full Stack Web Developer</h5>
 					<em>January 2019 - April 2020</em>
-					<span>
+					<span class="span">
 						Proin at aliquet odio. Vivamus tristique tempus feugiat. Nulla bibendum, augue et cursus
 						vulputate, orci metus porttitor metus, sit amet sodales nunc felis eget lorem. Phasellus et
 						dignissim odio. Quisque nec rutrum elit. Sed eget felis erat. Nullam in accumsan eros, eu
@@ -100,7 +100,7 @@
 					<h4>Freelance Photographer</h4>
 					<!--<h5>Full Stack Web Developer</h5>-->
 					<em>September 2016 - Present</em>
-					<span>
+					<span class="span">
 						Proin at aliquet odio. Vivamus tristique tempus feugiat. Nulla bibendum, augue et cursus
 						vulputate, orci metus porttitor metus, sit amet sodales nunc felis eget lorem. Phasellus et
 						dignissim odio. Quisque nec rutrum elit. Sed eget felis erat. Nullam in accumsan eros, eu
@@ -120,15 +120,15 @@
 		<div>
 			<h3>Portfolio</h3>
 			<div class="portfolioInfo">
-				<span>
+				<span class="span">
 					Programmer, photographer, designer, and creator. I take complex problems and produce simple and
 					elegant results. Continuously working to improve my skills so that I can be the best version of myself.
 				</span>
-				<span>
+				<span class="span">
 					Programmer, photographer, designer, and creator. I take complex problems and produce simple and
 					elegant results. Continuously working to improve my skills so that I can be the best version of myself.
 				</span>
-				<span>
+				<span class="span">
 					Programmer, photographer, designer, and creator. I take complex problems and produce simple and
 					elegant results. Continuously working to improve my skills so that I can be the best version of myself.
 				</span>
@@ -154,28 +154,53 @@
 
 	<article id="contact" class="contact">
 
-		<form [formGroup]="messageMe">
-			<h2>Please provide your email address</h2>
+		<div class="contactMe">
+			<h3>Contact</h3>
 
-			<div class="form-group">
-				<label>Name:</label>
-				<input [class.is-invalid]="messageMe.get('name').invalid && messageMe.get('name').touched" type="email" class="form-control" formControlName="email"type="text" class="form-control" formControlName="name"/>
-			</div>
 
-			<div class="form-group">
-				<label>Email:</label>
-				<input [class.is-invalid]="messageMe.get('email').invalid && messageMe.get('email').touched" type="email" class="form-control" formControlName="email"/>
-			</div>
+			<form [formGroup]="messageMe" (ngSubmit)="submitMessage()">
 
-			<div class="form-group">
-				<label>Message:</label>
-				<textarea [class.is-invalid]="messageMe.get('message').invalid && messageMe.get('message').touched" type="text" class="form-control" formControlName="message"></textarea>
-			</div>
+				<div id="emailConfirm">
+					<span style="color: #53d19f; ">Email Submitted!</span>
+				</div>
 
-			<div class="form-group">
-				<button type="button" (click)="sendMail()">Send</button>
-			</div>
-		</form>
+				<label for="nameInput" class="inp">
+					<input [class.invalid-form-field]="messageMe.get('name').invalid && messageMe.get('name').touched"
+					       formControlName="name"
+					       type="text" id="nameInput"
+					       placeholder="&nbsp;">
+					<span class="label">Name</span>
+					<span class="focus-bg"></span>
+				</label>
 
+				<label for="emailInput" class="inp">
+					<input [class.invalid-form-field]="messageMe.get('email').invalid && messageMe.get('email').touched"
+					       formControlName="email"
+					       type="text" id="emailInput"
+					       placeholder="&nbsp;">
+					<span class="label">Email</span>
+					<span class="focus-bg"></span>
+				</label>
+
+				<label for="messageInput" class="inp">
+					<textarea
+							[class.invalid-form-field]="messageMe.get('message').invalid &&  messageMe.get('message').touched"
+							formControlName="message"
+							type="text"
+							id="messageInput"
+							placeholder="&nbsp;"></textarea>
+					<span class="label">Message</span>
+					<span class="focus-bg"></span>
+				</label>
+
+				<div class="sendButton" [class.invalid-form-button-cont]="messageMe.invalid">
+					<button [class.invalid-form-button]="messageMe.invalid"
+					        [disabled]="messageMe.invalid"
+					        type="submit">Send
+					</button>
+				</div>
+
+			</form>
+		</div>
 	</article>
 </section>

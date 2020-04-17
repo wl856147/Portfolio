@@ -54,7 +54,7 @@ article h3 {
     margin: 0;
 }
 
-span {
+.span {
     text-align: center;
     font-family: 'Muli', sans-serif;
     font-weight: 200;
@@ -98,7 +98,6 @@ span {
 }
 
 .aboutMe .bio {
-    /*border: solid 1px red; !* For Development *!*/
     margin-left: 1rem;
     width: 55rem;
 }
@@ -252,6 +251,146 @@ span {
 /*************************************/
 /************** Contact **************/
 /*************************************/
+#contact {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    padding: 15rem 0;
+}
+
+#contact .contactMe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 65rem;
+}
+
+#contact .contactMe form {
+    width: 100%;
+    margin-top: 3rem;
+}
+
+#contact .contactMe form .inp {
+    position: relative;
+    margin: 1rem auto;
+    width: 100%;
+    /*max-width: 280px;*/
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#contact .contactMe form .inp .label {
+    position: absolute;
+    top: 20px;
+    left: 12px;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 500;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    pointer-events: none;
+}
+
+#contact .contactMe form .inp input,
+#contact .contactMe form .inp textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+    border: 0;
+    font-family: inherit;
+    padding: 16px 12px 0 12px;
+    height: 56px;
+    font-size: 16px;
+    font-weight: 400;
+    background: rgba(0, 0, 0, 0.02);
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.3);
+    color: #000;
+    -webkit-transition: all 0.15s ease;
+    transition: all 0.15s ease;
+}
+
+#contact .contactMe form .inp textarea {
+    height: 10rem;
+    padding-top: 2rem;
+}
+
+#contact .contactMe form .inp input:hover,
+#contact .contactMe form .inp textarea:hover {
+    background: rgba(0, 0, 0, 0.04);
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.5);
+}
+
+#contact .contactMe form .inp input:focus,
+#contact .contactMe form .inp textarea:focus {
+    background: rgba(0, 0, 0, 0.05);
+    outline: none;
+    box-shadow: inset 0 -2px 0 #53d19f !important;
+}
+
+#contact .contactMe form .inp input:focus + .label,
+#contact .contactMe form .inp textarea:focus + .label {
+    color: #53d19f;
+    -webkit-transform: translate3d(0, -12px, 0) scale(0.75);
+    transform: translate3d(0, -12px, 0) scale(0.75);
+}
+
+#contact .contactMe form .inp input:not(:placeholder-shown) + .label,
+#contact .contactMe form .inp textarea:not(:placeholder-shown) + .label {
+    color: rgba(0, 0, 0, 0.5);
+    -webkit-transform: translate3d(0, -12px, 0) scale(0.75);
+    transform: translate3d(0, -12px, 0) scale(0.75);
+}
+
+#contact .contactMe form .sendButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#contact .contactMe form button {
+    color: black;
+    background: none;
+    border: solid 2px transparent;
+    padding: 0.5rem 1rem;
+    transition: 0.2s;
+}
+
+#contact .contactMe form .sendButton :hover {
+    border: solid 2px #53d19f;
+    color: #53d19f;
+    text-decoration: none;
+}
+
+.invalid-form-field {
+    box-shadow: inset 0 -2px 0 red !important;
+}
+
+.invalid-form-button {
+    color: lightgray !important;
+    background: none !important;
+    border: solid 2px transparent !important;
+    padding: 0 !important;
+    transition: none !important;
+}
+
+.invalid-form-button-cont :hover {
+    border: solid 2px transparent !important;
+    color: lightgray !important;
+    text-decoration: none !important;
+}
+
+#emailConfirm {
+    width: 100%;
+    text-align: center;
+    visibility: hidden;
+}
 
 /*************************************/
 /********** Responsiveness ***********/
@@ -282,6 +421,10 @@ span {
 
     #portfolio div .portfolioLinks {
         width: 60vw;
+    }
+
+    #contact .contactMe form {
+        width: 85vw;
     }
 }
 
@@ -345,18 +488,11 @@ span {
     #portfolio div .portfolioLinks {
         width: 100vw;
     }
+
+    #contact .contactMe form .inp textarea {
+        height: 15rem !important;
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 

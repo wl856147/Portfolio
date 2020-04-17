@@ -1,6 +1,6 @@
 import {Component, OnInit, HostListener, Inject, ViewChild} from '@angular/core';
-import {trigger, state, transition, style, animate} from '@angular/animations';
-import {DOCUMENT} from '@angular/common';
+// import {trigger, state, transition, style, animate} from '@angular/animations';
+// import {DOCUMENT} from '@angular/common';
 
 import {OwlOptions} from 'ngx-owl-carousel-o';
 
@@ -8,10 +8,12 @@ import * as $ from 'jquery';
 
 import {FormGroup, FormControl, Validators} from '@angular/forms';
 import {AngularFireFunctions} from '@angular/fire/functions';
-import {AngularFireAuth} from '@angular/fire/auth';
-import * as firebase from 'firebase/app';
+// import {AngularFireAuth} from '@angular/fire/auth';
+// import * as firebase from 'firebase/app';
 
-import {HttpRequest, HttpHandler, HttpEvent, HttpInterceptor, HttpClientModule} from '@angular/common/http';
+// import {HttpRequest, HttpHandler, HttpEvent, HttpInterceptor, HttpClientModule} from '@angular/common/http';
+
+// import {ContactFormService} from '../models/contact-form.service';
 
 @Component({
     selector: 'app-home',
@@ -20,6 +22,7 @@ import {HttpRequest, HttpHandler, HttpEvent, HttpInterceptor, HttpClientModule} 
 })
 export class HomeComponent implements OnInit {
 
+    // Contact Form input field criteria
     messageMe = new FormGroup({
         name: new FormControl('', [
             Validators.required,
@@ -41,7 +44,7 @@ export class HomeComponent implements OnInit {
         mouseDrag: true,
         touchDrag: true,
         pullDrag: true,
-        dots: false,
+        dots: true,
         navSpeed: 500,
         navText: ['<', '>'],
         items: 3,
@@ -53,20 +56,54 @@ export class HomeComponent implements OnInit {
                 items: 1
             }
         },
-        nav: true
+        nav: false
     };
 
-    constructor(public afAuth: AngularFireAuth, private fun: AngularFireFunctions) {
+    // model = new ContactFormService('', '', '');
+
+    submitted = false;
+
+    submitMessage() {
+        this.submitted = true;
+
+        if (this.messageMe.valid) {
+            const callable = this.fun.httpsCallable('genericEmail');
+            callable({
+                name: this.messageMe.get('name').value,
+                email: this.messageMe.get('email').value,
+                message: this.messageMe.get('message').value
+            }).subscribe();
+
+            this.messageMe.reset();
+
+            $('#emailConfirm').css({opacity: 0.0, visibility: 'visible'}).animate({opacity: 1.0}, 500);
+
+            setTimeout(() => {
+                $('#emailConfirm').css({opacity: 1.0}).animate({opacity: 0.0}, 500);
+            }, 2000);
+
+            console.log('Valid Form.');
+        } else {
+            console.log('Invalid Form.');
+        }
+        // this.submitted = false;
+    }
+
+    constructor(private fun: AngularFireFunctions) {
     }
 
     ngOnInit() {
-
+        // this.model = new ContactFormService('', '', '');
     }
 
-    sendMail() {
-        const callable = this.fun.httpsCallable('genericEmail');
-        callable({ text: 'Sending email with Angular and SendGrid is fun!', subject: 'Email from Angular'}).subscribe();
-    }
+    // sendMail() {
+    //     const callable = this.fun.httpsCallable('genericEmail');
+    //     callable({
+    //         name: 'name',
+    //         email: 'test@test.ca',
+    //         message: 'Email from Angular'
+    //     }).subscribe();
+    // }
 
     // Sticky header
     @HostListener('window:scroll', ['$event'])
@@ -80,5 +117,6 @@ export class HomeComponent implements OnInit {
             });
         }
     }
+
 
 }
