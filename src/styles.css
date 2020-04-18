@@ -73,17 +73,18 @@ article h3 {
     justify-content: center;
     align-content: center;
     flex-direction: row;
-    padding: 15rem 0;
+    padding: 25vh 0;
+    /*border: solid 1px blue; !* For Development *!*/
 }
 
 .aboutMe {
-    /*border: solid 1px blue; !* For Development *!*/
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-content: center;
     align-items: center;
     width: 65rem;
+    margin-top: 80px;
 }
 
 .aboutMe .img {
@@ -392,6 +393,7 @@ article h3 {
     visibility: hidden;
     color: #53d19f;
 }
+
 #emailError {
     width: 100%;
     text-align: center;
