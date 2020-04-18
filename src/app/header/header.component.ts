@@ -20,10 +20,9 @@ export class HeaderComponent implements OnInit {
             $('#mobileHeader #mobileCont .links').css('display', 'flex');
 
             // Change Icon
-            $('#mobileHeader #mobileCont .navIcons').css({width: 'unset', height: 'unset'});
-            $('#mobileHeader #mobileCont #nav1').hide();
-            $('#mobileHeader #mobileCont #navX').css('display', 'flex');
-            $('#mobileHeader #mobileCont #nav2').addClass('nav2Add');
+            $('#mobileHeader #mobileCont .navIcons').css({height: 'unset'});
+            $('#navHam').hide();
+            $('#navX').css('display', 'flex');
 
         });
 
@@ -37,10 +36,9 @@ export class HeaderComponent implements OnInit {
             $('#mobileHeader #mobileCont .links').css('display', 'none');
 
             // Change Icon
-            $('#mobileHeader #mobileCont .navIcons').css({width: '100vw', 'margin-bottom': '20vh'});
-            $('#mobileHeader #mobileCont #nav1').css('display', 'flex');
-            $('#mobileHeader #mobileCont #navX').hide();
-            $('#mobileHeader #mobileCont #nav2').removeClass('nav2Add');
+            $('#mobileHeader #mobileCont .navIcons').css({width: '100vw', height: '20vh'});
+            $('#navHam').css('display', 'flex');
+            $('#navX').hide();
 
         });
 
