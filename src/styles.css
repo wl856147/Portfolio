@@ -84,7 +84,7 @@ article h3 {
     align-content: center;
     align-items: center;
     width: 65rem;
-    margin-top: 80px;
+    /*margin-top: 80px;*/
 }
 
 .aboutMe .img {
@@ -278,7 +278,6 @@ article h3 {
     position: relative;
     margin: 1rem auto;
     width: 100%;
-    /*max-width: 280px;*/
     border-radius: 5px;
     overflow: hidden;
 }
@@ -469,8 +468,8 @@ article h3 {
 
 @media only screen and (max-width: 750px) {
 
-    #about, #workExperience, #portfolio {
-        padding-top: 3rem;
+    #about, #workExperience, #portfolio, #contact {
+        padding-top: 7rem;
     }
 
     .aboutMe .img img {

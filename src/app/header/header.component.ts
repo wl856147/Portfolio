@@ -36,7 +36,7 @@ export class HeaderComponent implements OnInit {
             $('#mobileHeader #mobileCont .links').css('display', 'none');
 
             // Change Icon
-            $('#mobileHeader #mobileCont .navIcons').css({width: '100vw', height: '20vh'});
+            $('#mobileHeader #mobileCont .navIcons').css({height: '20vh'});
             $('#navHam').css('display', 'flex');
             $('#navX').hide();
 
