@@ -1,3 +1,6 @@
+/************************************/
+/********** Regular Header **********/
+/************************************/
 #navbar {
     display: none;
     justify-content: space-between;
@@ -54,7 +57,9 @@ h2 {
     }
 }
 
-/************************************************************************************************/
+/***********************************/
+/********** Mobile Header **********/
+/***********************************/
 #mobileHeader {
     display: flex;
     justify-content: flex-end;
@@ -102,13 +107,8 @@ h2 {
     border-radius: 50%;
     box-shadow: 0 0 10px gray;
     color: #53d19f;
-    -webkit-animation: spin .15s linear; /* Safari */
-    animation: spin .15s linear ;
-}
-
-#mobileHeader #mobileCont .navIcons #navX i {
-    font-family: 'Baloo Bhaina 2', cursive;
-    margin-top: 0.75rem;
+    /*-webkit-animation: spin .15s linear; !* Safari *!*/
+    /*animation: spin .15s linear ;*/
 }
 
 #mobileHeader #mobileCont #navHam {
@@ -167,14 +167,18 @@ h2 {
     background: #42a77f;
 }
 
+.displayImp {
+    display: flex !important;
+}
 
 /* Safari */
-@-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(180deg); }
-}
+/*@-webkit-keyframes spin {*/
+/*0% { -webkit-transform: rotate(0deg); }*/
+/*100% { -webkit-transform: rotate(180deg); }*/
+/*}*/
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(180deg); }
-}
+/*@keyframes spin {*/
+/*0% { transform: rotate(0deg); }*/
+/*100% { transform: rotate(180deg); }*/
+/*}*/
+

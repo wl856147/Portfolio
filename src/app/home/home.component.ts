@@ -82,11 +82,35 @@ export class HomeComponent implements OnInit {
     }
 
     ngOnInit() {
+
+        function runIt1() {
+            const arrow = $('.arrow1');
+            arrow.animate({opacity: '1'}, 1000);
+            arrow.animate({opacity: '0'}, 1000, runIt1);
+        }
+
+        function runIt2() {
+            const arrow = $('.arrow2');
+            arrow.animate({opacity: '1'}, 1000);
+            arrow.animate({opacity: '0'}, 1000, runIt2);
+        }
+
+        function runIt3() {
+            const arrow = $('.arrow3');
+            arrow.animate({opacity: '1'}, 1000);
+            arrow.animate({opacity: '0'}, 1000, runIt3);
+        }
+
+        setTimeout(runIt1, 100);
+        setTimeout(runIt2, 250);
+        setTimeout(runIt3, 400);
+
     }
 
     // Sticky header
     @HostListener('window:scroll', ['$event'])
     onWindowScroll(e) {
+
         if (window.pageYOffset > 550) {
             $('#navbar').slideDown();
             $('#navbar').addClass('sticky');

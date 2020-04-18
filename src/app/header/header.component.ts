@@ -22,13 +22,11 @@ export class HeaderComponent implements OnInit {
             // Change Icon
             $('#mobileHeader #mobileCont .navIcons').css({height: 'unset'});
             $('#navHam').hide();
-            $('#navX').css('display', 'flex');
-
+            $('#navX').addClass('displayImp');
         });
 
 
         $('#mobileHeader #mobileCont .navIcons #navX, #mobileHeader #mobileCont .links .link').click(() => {
-            console.log('here');
             // Retract Menu
             $('#mobileHeader #mobileCont').attr('class', '');
 
@@ -38,7 +36,7 @@ export class HeaderComponent implements OnInit {
             // Change Icon
             $('#mobileHeader #mobileCont .navIcons').css({height: '20vh'});
             $('#navHam').css('display', 'flex');
-            $('#navX').hide();
+            $('#navX').removeClass('displayImp');
 
         });
 

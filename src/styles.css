@@ -44,6 +44,40 @@ body {
     padding: 0 0 10px 10px;
 }
 
+/******************************************************************************/
+
+.scrollDownCont {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.scrollDown {
+    position: absolute;
+    top: 88%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    margin-left: -12px;
+    border-left: 1px solid #031926;
+    border-bottom: 1px solid #031926;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    box-sizing: border-box;
+    animation-delay: 0s;
+}
+
+.arrow2 {
+    margin-top: 1.25rem;
+}
+
+.arrow3 {
+    margin-top: 2.5rem;
+}
+
+/******************************************************************************/
+
 article h3 {
     color: inherit;
     font-family: 'Primary', Moderne Sans, sans-serif;
@@ -468,8 +502,12 @@ article h3 {
 
 @media only screen and (max-width: 750px) {
 
+    .title h1 {
+        font-size: 2.75em;
+    }
+
     #about, #workExperience, #portfolio, #contact {
-        padding-top: 7rem;
+        padding-top: 3rem;
     }
 
     .aboutMe .img img {
