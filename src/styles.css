@@ -44,8 +44,6 @@ body {
     padding: 0 0 10px 10px;
 }
 
-/******************************************************************************/
-
 .scrollDownCont {
     display: flex;
     justify-content: center;
@@ -65,7 +63,6 @@ body {
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
     box-sizing: border-box;
-    animation-delay: 0s;
 }
 
 .arrow2 {
@@ -75,8 +72,6 @@ body {
 .arrow3 {
     margin-top: 2.5rem;
 }
-
-/******************************************************************************/
 
 article h3 {
     color: inherit;
