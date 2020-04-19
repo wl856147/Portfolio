@@ -53,10 +53,10 @@ body {
 
 .arrow span {
     display: block;
-    width: 18px;
-    height: 18px;
-    border-bottom: 3px solid #53d19f;
-    border-right: 3px solid #53d19f;
+    width: 25px;
+    height: 25px;
+    border-bottom: 2px solid #53d19f;
+    border-right: 2px solid #53d19f;
     transform: rotate(45deg);
     margin: -10px;
     animation: animate 2s infinite;
