@@ -85,24 +85,24 @@ body {
 }
 
 article h3 {
-color: inherit;
-font-family: 'Primary', Moderne Sans, sans-serif;
-text-align: center;
-font-size: 2.25em;
-font-weight: 600;
-line-height: 1;
-margin: 0;
+    color: inherit;
+    font-family: 'Primary', Moderne Sans, sans-serif;
+    text-align: center;
+    font-size: 2.25em;
+    font-weight: 600;
+    line-height: 1;
+    margin: 0;
 }
 
 .span {
-text-align: center;
-font-family: 'Muli', sans-serif;
-font-weight: 200;
-font-size: 1.25em;
-display: block;
-padding: 1em 0 1.5em;
-color: #333333;
-line-height: 1.4;
+    text-align: center;
+    font-family: 'Muli', sans-serif;
+    font-weight: 200;
+    font-size: 1.25em;
+    display: block;
+    padding: 1em 0 1.5em;
+    color: #333333;
+    line-height: 1.4;
 }
 
 /*************************************/
@@ -316,7 +316,7 @@ line-height: 1.4;
 
 #contact .contactMe form .inp {
     position: relative;
-    margin: 1rem auto;
+    margin: 0.25rem auto;
     width: 100%;
     border-radius: 5px;
     overflow: hidden;
@@ -513,7 +513,7 @@ line-height: 1.4;
     }
 
     #about, #workExperience, #portfolio, #contact {
-        padding-top: 3rem;
+        padding-top: 5rem;
     }
 
     .aboutMe .img img {
