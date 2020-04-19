@@ -48,7 +48,7 @@ body {
     position: absolute;
     top: 90%;
     left: 50%;
-    /*transform: translate(-50%, -50%);*/
+    transform: translate(-50%, -50%);
 }
 
 .arrow span {
@@ -84,11 +84,25 @@ body {
     }
 }
 
-.scrollDownCont {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    flex-direction: column;
+article h3 {
+color: inherit;
+font-family: 'Primary', Moderne Sans, sans-serif;
+text-align: center;
+font-size: 2.25em;
+font-weight: 600;
+line-height: 1;
+margin: 0;
+}
+
+.span {
+text-align: center;
+font-family: 'Muli', sans-serif;
+font-weight: 200;
+font-size: 1.25em;
+display: block;
+padding: 1em 0 1.5em;
+color: #333333;
+line-height: 1.4;
 }
 
 /*************************************/
