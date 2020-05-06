@@ -509,6 +509,10 @@ article h3 {
         width: 80vw;
     }
 
+    .portfolioInfo .span {
+        padding-left: 1rem;
+    }
+
 }
 
 @media only screen and (max-width: 750px) {
@@ -544,6 +548,10 @@ article h3 {
 
     #portfolio div .portfolioLinks {
         width: 100vw;
+    }
+
+    .portfolioInfo .span {
+        padding-left: 0;
     }
 
     #contact .contactMe form .inp textarea {
