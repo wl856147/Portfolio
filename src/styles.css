@@ -165,8 +165,8 @@ article h3 {
 }
 
 .aboutMe .bio .socialMediaLinks .gitlab a :hover {
-    border: solid 2px #FC6D27;
-    color: #FC6D27;
+    border: solid 2px #F1502F;
+    color: #F1502F;
 }
 
 .aboutMe .bio .socialMediaLinks .instagram a :hover {
@@ -255,18 +255,23 @@ article h3 {
     justify-content: flex-start;
     align-content: center;
     align-items: center;
-    width: 65rem;
+    width: 60rem;
 }
 
 #portfolio div .portfolioInfo {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     margin: 3rem 3rem 0 3rem;
     flex-direction: column;
     align-content: center;
     text-align: center;
     flex-wrap: wrap;
+}
+
+.portfolioInfo .span {
+    text-align: left;
+    padding-left: 2rem;
 }
 
 #portfolio div .portfolioLinks {
